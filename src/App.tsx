@@ -6,6 +6,7 @@ import {NewComponent} from "./NewComponent/NewComponent"
 import {Button} from "./Button/Button"
 import {NewButton} from "./NewButton/NewButton";
 import {StateComponent} from "./StateComponent/StateComponent";
+import { Money } from './Money/Money';
 function App() {
     const Button1Foo = (subscriber:string, age:number, address:string) => {
         console.log(subscriber, age, address)
@@ -27,6 +28,7 @@ function App() {
             <NewButton name={'MyYoutubeChannel - 2'} callBack={()=>Button2Foo('Vania')}/>
             <NewButton name={'MyYoutubeChannel - 3'} callBack={Button3Foo}/>
             <StateComponent/>
+            <Money/>
         </>
     );
 }
