@@ -15,7 +15,6 @@ type MoneyType = {
 
 export const MoneyHW = (props:PropsType) => {
     console.log(props.currentMoney)
-    debugger
     return (
         <>
             <ul>

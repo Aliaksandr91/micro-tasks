@@ -8,6 +8,8 @@ import {NewButton} from "./NewButton/NewButton";
 import {StateComponent} from "./StateComponent/StateComponent";
 import {Money} from './Money/Money';
 import {FullInput} from "./FullInput/FullInput";
+import {Input} from "./FullInput/Input";
+import {ButtonInput} from "./FullInput/ButtonInput";
 
 function App() {
     const Button1Foo = (subscriber: string, age: number, address: string) => {
@@ -30,6 +32,13 @@ function App() {
         let newMessage = {message: title}
         setMessage([newMessage, ...message ])
     }
+
+    const callBackButtonHandler = () => {
+        addMessage(title)
+        setTitle('')
+    }
+
+    let [title, setTitle] = useState('')
     return (
         <>
             <Header titleHeader={'Header'}/>
@@ -42,8 +51,10 @@ function App() {
             <NewButton name={'MyYoutubeChannel - 3'} callBack={Button3Foo}/>
             <StateComponent/>
             <Money/>
-            <FullInput addMessage={addMessage}/>
-
+            <h2>Lesson 6</h2>
+            {/*<FullInput addMessage={addMessage}/>*/}
+            <Input setTitle={setTitle} title={title}/>
+            <ButtonInput name={'+'} callBack={callBackButtonHandler}/>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>

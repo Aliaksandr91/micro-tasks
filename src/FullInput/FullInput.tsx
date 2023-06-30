@@ -17,7 +17,6 @@ export const FullInput = (props: FullInputPropsType) => {
     return (
 
         <div>
-            <h2>Lesson 6</h2>
             <input onChange={onChangeInputHandler} type="text" value={title}/>
             <button onClick={onClickButtonHandler}>+</button>
 
